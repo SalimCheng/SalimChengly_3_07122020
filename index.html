@@ -9,31 +9,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <title>Ohmyfood!</title>
 </head>
 <body>
+    <nav>
+        <h1>ohmyfood</h1>
+    </nav>
     <header>
-        <img src="images/ohmyfood.png" alt="Logo Ohmyfood">
         <div class="localisation"><i class="fas fa-map-marker-alt"></i><p>Paris, Belleville</p></div>
         <section class="header--body">
-            <h1>Réservez le menu qui vous convient</h1>
+            <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <span class="header--body--btn">Explorer nos restaurants</span>
+        </section>
+        <section class="header--operation">
+        <h2>Fonctionnement</h2>
+        <ul class="header--operation--elem">
+            <li><span class="header--operation--list">1</span><i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p></li>
+            <li><span class="header--operation--list">2</span><i class="fas fa-list-ul"></i><p>Composez votre menu</p></li>
+            <li><span class="header--operation--list">3</span><i class="fas fa-store"></i><p>Dégustez au restaurant</p></li>
+        </ul>
         </section>
     </header>
-    <nav>
-        <ul>
-            <h2>Fonctionnement</h2>
-            <li><i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p></li>
-            <li><i class="fas fa-list-ul"></i><p>Composez votre menu</p></li>
-            <li><i class="fas fa-store"></i><p>Dégustez au restaurant</p></li>
-        </ul>
-    </nav>
     <main>
         <div id="restaurants">
             <h3>Restaurants</h3>
-            <a href="Menus/Menu1.html" class="card">
+          <!--  <div class="card">
+            <a href="Menus/Menu1.html">
                 <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                 <span class="card caption">
                     <h3>La palette du goût</h3>
@@ -41,6 +44,19 @@
                     <i class="far fa-heart"></i>
                 </span>
             </a>
+            </div>-->
+            <article class="card">
+                <a href="Menus/Menu1.html"><div class="card--category">
+                    <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                </div>
+                <div class="card--new">
+                    <span class="card--new--text">Nouveau</span>
+                </div>
+                <h2 class="card--title"><a href="#">La palette du goût</a></h2>
+                <div class="card--subtitle">Ménilmontant</div>
+            </a>
+                <div class="card--like"><i class="far fa-heart"></i></div>
+            </article><!--
             <a href="Menus/Menu2.html" class="card">
                 <img src="images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                 <h3>La note enchantée</h3>
@@ -59,14 +75,13 @@
                 <p>Folie-Méricourt</p>
                 <i class="far fa-heart"></i>
             </a>
-        </div>
+        </div>-->
     </main>
     <footer>
         <h4>ohmyfood</h4>
-        <img src="images/ohmyfood.png" alt="Logo Ohmyfood">
-        <ul>
-            <li><i class="fas fa-utensils"></i><a>Proposer un restaurant</a></li>
-            <li><i class="fas fa-hands-helping"></i><a>Devenir partenaire</a></li>
+        <ul class="footer--list">
+            <li><i class="fas fa-utensils"></i><a href="">Proposer un restaurant</a></li>
+            <li><i class="fas fa-hands-helping"></i><a href="">Devenir partenaire</a></li>
             <li><a href="">Mentions légales</a></li>
             <li><a href="">Contact</a></li>
         </ul>
