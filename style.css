@@ -98,12 +98,19 @@ td:not([align]), th:not([align]) {
     background-color: #F6F6F6;
     height: 18rem;
     text-align: center;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header--body h2 {
+    padding: 3rem 1rem 0rem 1rem;
+    width: 17rem;
   }
   .header--body p {
-    margin: 1rem;
+    margin: 0.5rem 2rem 0rem 2rem;
     color: grey;
     height: 4rem;
+    width: 18rem;
   }
   .header--body--btn {
     text-decoration: none;
@@ -112,23 +119,18 @@ td:not([align]), th:not([align]) {
     padding: 0.9rem 1.5rem 0.9rem 1.5rem;
     box-shadow: 0px 3px 9px 0.1px rgba(0, 0, 0, 0.3);
     border-radius: 25px;
-    color: white;
     font-family: "Roboto";
+  }
+  .header--body--btn a {
+    color: white;
   }
 
   .header--operation {
-    margin: 2rem 1.2rem 1rem 1.2rem;
+    margin: 2.6rem 1.2rem 4rem 1.2rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-  .header--operation h2 {
-    margin-left: 0.9rem;
-  }
-  .header--operation--elem {
-    padding: 0;
-    margin: 0 1rem 1rem 1rem;
   }
   .header--operation li {
     display: flex;
@@ -161,7 +163,7 @@ td:not([align]), th:not([align]) {
     width: 1.5rem;
     margin-left: 2rem;
     color: grey;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .header--operation i:hover {
     color: #9356DC;
@@ -181,16 +183,42 @@ td:not([align]), th:not([align]) {
   }
 
   #restaurants {
-    padding: 5rem 1rem 1rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     background-color: #F6F6F6;
+  }
+  #restaurants .restaurants--title {
+    margin-bottom: 1.5rem;
   }
 
   .card {
-    border: solid 2px;
-    border-radius: 5%;
+    display: flex;
+    justify-content: column;
+    margin: 1rem 0 1rem 0;
+    height: 68vw;
+    position: relative;
+    /*background-color: white;*/
+    box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 4vw;
   }
-  .cardcard--category {
-    background-color: #fff;
+  .card--description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: absolute;
+     top: 50vw;
+     left: 1vw;
+     width: 87vw;
+     height: 18vw;*/
+  }
+  .card--description h3 {
+    font-size: 1rem;
+    padding-bottom: 0.3rem;
+    margin: 0.5rem 0 0 0.5rem;
+  }
+  .card--description p {
+    font-weight: lighter;
+    font-size: 0.9rem;
+    margin: 0rem 0 0 0.5rem;
   }
   .card--new {
     background-color: #99E2D0;
@@ -202,32 +230,61 @@ td:not([align]), th:not([align]) {
     transform: translateX(65vw) translateY(-45vw);
   }
   .card--new--text {
-    color: #32b091;
+    color: #299077;
+    font-size: small;
   }
 
+  /* ANIMATION */
+  /*
+  .card--like
+  {
+      position: absolute;
+      left: 75vw; bottom: 7vw;
+  }*/
+  .fa-heart {
+    font-size: 1.3rem;
+  }
+
+  .fa-heart:hover {
+    color: #9356DC;
+    background: linear-gradient(#FF79DA, #9356DC);
+  }
+
+  .card--like-icone {
+    background: linear-gradient(#9356DC, #FF79DA);
+  }
+
+  /*  ANIMATION */
   .card--category img {
     height: 50vw;
     width: 100vw;
+    object-fit: cover;
+    border-radius: 4vw 4vw 0 0;
   }
 
   footer {
     background-color: #353535;
     color: white;
-    height: 13rem;
+    height: 12rem;
     line-height: 1.5rem;
   }
 
   footer h4 {
-    padding: 1.5rem 0 0 2.2rem;
+    padding: 1.5rem 0 0 1rem;
     font-size: 1.2rem;
   }
 
   .footer--list {
     list-style-type: none;
+    margin: 1rem;
   }
-
-  .footer--list {
-    color: white;
+  .footer--list a {
+    color: #fff;
+  }
+  .footer--list i {
+    padding-right: 1.5rem;
+    font-size: small;
+    width: 0.2rem;
   }
 }
 
