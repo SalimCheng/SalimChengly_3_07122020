@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Accueil Ohmyfood">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css">    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <title>Ohmyfood! La note enchantée</title>
 </head>
 <body>
+    <nav>
+        <a href="Menu1.html"><i class="fas fa-arrow-left"></i></a>
+        <h1>ohmyfood</h1>
+    </nav>
     <header>
-        <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
-        <img src="../images/ohmyfood.png" alt="Logo Ohmyfood">
+        <div class="img--head">
+            <img src="../images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+        </div>
     </header>
-    <div class="img--head">
-        <img src="../images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-    </div>
-    <main>
+    <main id="card--menu">
         <h1>La note enchantée <i class="far fa-heart"></i></h1>
         <div class="starter">
             <h2>Entrées</h2>
@@ -82,14 +84,13 @@
                 </li>
             </ul>
         </div>
-        <button>Commander</button>
+        <span class="cmd--btn"><a href="#">Commander</a></span>
     </main>
     <footer>
         <h4>ohmyfood</h4>
-        <img src="images/ohmyfood.png" alt="Logo Ohmyfood">
-        <ul>
-            <li><i class="fas fa-utensils"></i><a>Proposer un restaurant</a></li>
-            <li><i class="fas fa-hands-helping"></i><a>Devenir partenaire</a></li>
+        <ul class="footer--list">
+            <li><i class="fas fa-utensils"></i><a href="">Proposer un restaurant</a></li>
+            <li><i class="fas fa-hands-helping"></i><a href="">Devenir partenaire</a></li>
             <li><a href="">Mentions légales</a></li>
             <li><a href="">Contact</a></li>
         </ul>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Accueil Ohmyfood">
-    <link rel="stylesheet" href="../style.css">    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../style.css">    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
@@ -22,8 +23,12 @@
     </div>
     </header>
 
-    <main>
-        <h1>La palette du goût <i class="far fa-heart"></i></h1>
+    <main id="card--menu">
+    <div class="card--body">
+        <div class="menu--title">
+        <h1>La palette du goût</h1>
+        <span class="card--like--icone"><i class="far fa-heart"></i></span>
+        </div>
         <div class="starter">
             <h2>Entrées</h2>
             <ul>
@@ -84,14 +89,14 @@
                 </li>
             </ul>
         </div>
-        <button>Commander</button>
+        <span class="cmd--btn"><a href="#">Commander</a></span>
+    </div>
     </main>
     <footer>
         <h4>ohmyfood</h4>
-        <img src="images/ohmyfood.png" alt="Logo Ohmyfood">
-        <ul>
-            <li><i class="fas fa-utensils"></i><a>Proposer un restaurant</a></li>
-            <li><i class="fas fa-hands-helping"></i><a>Devenir partenaire</a></li>
+        <ul class="footer--list">
+            <li><i class="fas fa-utensils"></i><a href="">Proposer un restaurant</a></li>
+            <li><i class="fas fa-hands-helping"></i><a href="">Devenir partenaire</a></li>
             <li><a href="">Mentions légales</a></li>
             <li><a href="">Contact</a></li>
         </ul>
