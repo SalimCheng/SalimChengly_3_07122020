@@ -1,0 +1,70 @@
+@import "../utils/variables";
+
+nav
+{
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    font-size: 2.5rem;
+    p
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: .4rem;
+        font-size: 2.5rem;
+        font-family: "Shrikhand";
+    }
+    i
+    {
+        position: absolute;
+        left: 1rem;
+        top: 1.6rem;
+        font-size: 1.3rem;
+        color: rgba($color: #000000, $alpha: 0.7);
+    }
+}
+@media (min-width: 320px) and (max-width: 480px)
+{
+    .head 
+    {
+        position: fixed;
+        background-color: $white;
+        width: 100vw;
+        top: 0;
+    }
+    .img--head
+    {
+        width: auto;
+        object-fit: cover;
+        img 
+        {
+            object-fit: cover;
+            height: 20rem;
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px)
+{
+    .head 
+    {
+        background-color: $white;
+        width: auto;
+    }
+    .img--head
+    {
+        width: auto;
+        object-fit: cover;
+        img 
+        {
+            object-fit: cover;
+            height: 20rem;
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 1025px)
+{
+    
+}

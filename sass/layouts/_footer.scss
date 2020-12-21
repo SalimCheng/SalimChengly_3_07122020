@@ -1,0 +1,27 @@
+footer
+{
+    background-color: #353535;
+    color: white;
+    height: 12rem;
+    line-height: 1.5rem;
+}
+footer h4
+{
+    padding: 1.5rem 0 0 1rem;
+    font-size: 1.2rem;
+}
+.footer--list
+{
+    list-style-type: none;
+    margin: 1rem;
+    a 
+    {
+        color:$white;
+    }
+    i 
+    {
+        padding-right: 1.5rem;
+        font-size: small;
+        width: 0.2rem;
+    }
+}

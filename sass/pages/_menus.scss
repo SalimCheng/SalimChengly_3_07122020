@@ -1,0 +1,214 @@
+@import "../utils/variables";
+
+.bodypage
+{
+    background-color: $bckground;
+}
+#card--menu
+{
+    background-color: $bckground;
+    padding: 1rem;
+    border-radius: 3rem 3rem 0 0;
+    position: relative;
+    bottom: 2.9rem;
+}
+.title
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    h1 
+    {
+        font-size: 1.6rem;
+    }
+    span 
+    {
+        margin: 0rem 0vw 0 10vw;
+    }
+    &--content
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 78vw;
+    }
+}
+.menu
+{
+    margin-top: 2rem;
+}
+.menu h2
+{
+    font-size: 1rem;
+    font-weight: 100;
+}
+.menu div
+{
+    border-bottom: $tertiary solid 2px;
+    width: 2.3rem;
+}
+
+.menu--list
+{
+    padding: 1rem 0rem 0 0rem;
+    
+    &--menu
+    {
+        background-color: $white;
+        margin: 0.8rem 0 0.8rem 0;
+        border-radius: 1rem;
+        box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.08);
+        height: 4rem;
+    
+        h3
+        {
+            padding: 0.8rem 0 0.2rem 0.8rem;
+            font-size: medium;
+            text-overflow: clip ellipsis;
+            display: inline-block;
+            overflow: hidden;
+        }
+    }
+}
+
+.menu--description
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.8rem 0 0.8rem;
+    p 
+    {
+        text-overflow: clip ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+    }
+}
+.price
+{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 2rem;
+    font-weight: bold;
+    font-size: small;
+}
+.menu-content
+{
+    width: 50rem;
+}
+@media (min-width: 320px) and (max-width: 480px)
+{
+}
+@media (min-width: 481px) and (max-width: 767px)
+{
+    
+}
+@media (min-width: 768px) and (max-width: 1024px)
+{
+    body 
+    {
+        background: linear-gradient($tertiary, $primary);
+    }
+
+}
+@media (min-width: 1025px) and (max-width: 1429px)
+{
+    body 
+    {
+        background: linear-gradient($tertiary, $primary);
+    }
+    .bodypage
+    {
+        background-color: $bckground;
+    } 
+
+    nav 
+    {
+        background-color: $white;
+    }
+    .img--head
+    {
+        width: auto;
+        object-fit: cover;
+        img 
+        {
+            object-fit: cover;
+            height: 20rem;
+            width: 100%;
+        }
+    }
+    #bloc
+    {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        margin: 10vw;
+        box-shadow: 0px 3px 9px 0.9px rgba(0, 0, 0, 0.5);
+    }
+    ul.menu--list
+    {
+        padding: 1rem 0rem 0 0rem;
+    }
+    li.menu--list--menu
+    {
+        width: 48rem;
+    }
+    a.menu-content
+    {
+        width: 48rem;
+    }
+    .check
+    {
+        width: 5rem;
+    }
+
+}
+@media (min-width: 1430px)
+{
+    body 
+    {
+        background: linear-gradient($tertiary, $primary);
+    }
+    nav 
+    {
+        background-color: $white;
+    }
+    .bodypage
+    {
+        background-color: $bckground;
+    } 
+    #bloc
+    {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        margin: 10vw;
+        box-shadow: 0px 3px 9px 0.9px rgba(0, 0, 0, 0.5);
+    }
+    ul.menu--list
+    {
+        padding: 1rem 0rem 0 0rem;
+    }
+    li.menu--list--menu
+    {
+        width: 65rem;
+    }
+    a.menu-content
+    {
+        width: 65rem;
+    }
+    .img--head
+    {
+        img 
+        {
+            object-fit: cover;
+            height: 20rem;
+            width: 100%;
+        }
+    }
+}

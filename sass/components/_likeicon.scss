@@ -1,0 +1,27 @@
+.card--like
+{
+    padding: 1.2rem 1.2rem 1.2rem 0rem;
+}
+.fa-like
+{
+    font-size: 1.2rem;
+    margin-right:10px;
+    &:hover{
+        .far
+        {
+            display:none;
+        }
+        .fas{
+            display:block;
+        }
+    }
+    .fas
+    {
+        color: $primary;
+        background: linear-gradient($primary, $secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display:none;
+        position: relative;
+    }
+}

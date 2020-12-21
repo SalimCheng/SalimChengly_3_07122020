@@ -1,0 +1,288 @@
+@import "../utils/variables";
+
+.fa-like
+{
+    .fas
+    {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $primary;
+        background: linear-gradient($primary, $secondary);
+        display:none;
+        position: relative;    
+    }
+}
+/*
+.menu--list
+{
+    -webkit-animation: fadein 2s;
+    transition: transform 2330ms ease-in-out;
+    &--menu
+    {
+        transform: translate(0px, -1vh);
+        &:hover
+        {
+            .price
+            {
+                animation: AutoSlide 300ms ease-in forwards;
+                transform-origin: right;
+            }
+            .check
+            {
+                animation: AutoSlide 300ms ease-in-out forwards;
+                transform-origin: right;
+            }
+            .fa-check-circle
+            {
+                -webkit-animation: spin 450ms linear;
+                -moz-animation: spin 450ms linear;
+                animation: spin 450ms linear;
+            }
+        }
+    }
+}
+.check
+{
+    animation: Slideout 100ms ease-in-out forwards;
+}
+@media (min-width: 320px) and (max-width: 480px)
+{
+
+    .menu
+    {
+        margin-top: 2rem;
+    }
+}
+@-webkit-keyframes spin
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spin
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin 
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes AutoSlide 
+{
+    0%
+    {
+        transform: scaleX(0);
+    }
+    50%
+    {
+        transform: scaleX(0.8);  
+    }
+    100% 
+    {
+        transform: scaleX(1);
+    }
+}
+@keyframes SlideOut
+{
+    from
+    {
+        transform: scaleX(1);
+    }
+    to 
+    {
+        transform: scaleX(0);
+    }
+}
+@keyframes fadein
+{
+    from
+    {
+        opacity: 0;
+    }
+    to 
+    {
+        opacity: 1;
+    }
+}
+*/
+.menu--list
+{
+    width: 100%;
+    /*transition: transform 2330ms ease-in-out;*/
+    -webkit-animation: fadein 2s;
+    p 
+    {
+        width: 40vw;
+    }    
+    &--menu
+    {
+        width: 100%;
+        display: flex;
+        transform: translate(0px, -1vh);
+        h3 
+        {
+            text-overflow: clip ellipsis;
+        }
+        &:hover
+        {
+            .price
+            {
+                transform-origin: right;
+                transition: AutoSlide 350ms ease-in-out;
+                transition-property: all;
+                animation: slide 350ms ease-in; 
+            }
+            .check
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 10vw;
+                height: 4rem;
+                border-radius: 0 1rem 1rem 0;
+                background-color: $tertiary;
+                animation: AutoSlide 350ms ease-in-out forwards;
+                transform-origin: right;
+            }
+            .fa-check-circle
+            {
+                -webkit-animation: spin 450ms linear;
+                -moz-animation: spin 450ms linear;
+                animation: spin 450ms linear;
+            }
+        }
+    }
+}
+.check
+{
+    display: none;
+        i
+        {
+            color: $white;
+        }
+}
+
+.menu--list--menu li:nth-child(2) {
+	animation-delay: 1s;
+}
+.menu--list--menu li:nth-child(3) {
+	animation-delay: 2s;
+}
+.menu--list--menu li:nth-child(4) {
+	animation-delay: 3s;
+}
+.menu--list--menu li:nth-child(5) {
+	animation-delay: 4s;
+}
+.menu--list--menu li:nth-child(6) {
+	animation-delay: 1s;
+}
+.menu--list--menu li:nth-child(7) {
+	animation-delay: 2s;
+}
+.menu--list--menu li:nth-child(8) {
+	animation-delay: 3s;
+}
+.menu--list--menu li:nth-child(9) {
+	animation-delay: 4s;
+}
+.menu--list--menu li:nth-child(10) {
+	animation-delay: 4s;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+    }    
+}
+@-webkit-keyframes spin
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spin
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin 
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes AutoSlide {
+    0%
+    {
+        transform: scaleX(0);
+    }
+    50%
+    {
+        transform: scaleX(0.5);  
+    }
+    100% 
+    {
+        transform: scaleX(1);
+    }
+}
+@keyframes SlideOut
+{
+    from
+    {
+        transform: scaleX(1);
+    }
+    to 
+    {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes fadein
+{
+    from
+    {
+        opacity: 0;
+    }
+    to 
+    {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes slide 
+{ 
+    0% 
+    { 
+        transform: skew(0) translateX(5rem);
+    } 
+    100%
+    {
+        transform: skew(0) translateX(0rem);
+    }
+} 
+@keyframes slide 
+{ 
+    0% 
+    { 
+        transform: skew(0) translateX(5rem);
+    } 
+    100%
+    {
+        transform: skew(0) translateX(0rem);
+    }
+} 
