@@ -202,11 +202,11 @@
 
 }
 @media (min-width: 481px) and (max-width: 767px)
-{
+{/*
     .omf-header
     {
         height: 48rem;
-    }/*
+    }*//*
     article.card-map
     {
         margin: 0.5rem;
@@ -221,14 +221,17 @@
     {
         height: 22vw;
         width: auto;
-    }    */
-
+    }  */  
+    .card-map
+    {
+        height: 64vw;
+    }
 }
 @media (min-width: 768px) and (max-width: 1024px)
 {
-    .index
+    body 
     {
-        background: linear-gradient($primary, $secondary);
+        background: linear-gradient($tertiary, $primary);
     }
     .bodypage
     {
@@ -326,12 +329,12 @@
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        margin: 0 5rem 0 5rem;
+        margin: 0 2rem 0 2rem;
     }
     .card--category img
     {
         height: 25vw;
-        width: 25vw;    
+        width: 30vw;    
     }
     .card--category
     {

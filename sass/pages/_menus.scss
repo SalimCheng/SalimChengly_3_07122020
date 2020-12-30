@@ -1,5 +1,9 @@
 @import "../utils/variables";
 
+nav 
+{
+    background-color: $white;
+}
 .bodypage
 {
     background-color: $bckground;
@@ -52,38 +56,47 @@
 .menu--list
 {
     padding: 1rem 0rem 0 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
     &--menu
     {
+        display: flex;
         background-color: $white;
         margin: 0.8rem 0 0.8rem 0;
         border-radius: 1rem;
         box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.08);
-        height: 4rem;
+        height: auto;
     
         h3
         {
-            padding: 0.8rem 0 0.2rem 0.8rem;
+            /*padding: 0.8rem 0 0.2rem 0.8rem;*/
             font-size: medium;
-            text-overflow: clip ellipsis;
             display: inline-block;
             overflow: hidden;
+            width: 75%;
         }
     }
 }
 
 .menu--description
 {
-    display: flex;
+    display: block;
     justify-content: space-between;
     padding: 0 0.8rem 0 0.8rem;
+    width: 80%;
+    height: 4rem;
     p 
     {
-        text-overflow: clip ellipsis;
-        white-space: nowrap;
-        display: inline-block;
-        overflow: hidden;
+        display: flex;
+        font-size: 15px;
     }
+}
+.priceplace
+{
+    width: 10%;
 }
 .price
 {
@@ -95,7 +108,8 @@
 }
 .menu-content
 {
-    width: 50rem;
+    width: 100%;
+    display: flex;
 }
 @media (min-width: 320px) and (max-width: 480px)
 {
@@ -164,7 +178,6 @@
     {
         width: 5rem;
     }
-
 }
 @media (min-width: 1430px)
 {

@@ -6,12 +6,15 @@
 {
     font-size: 1.2rem;
     margin-right:10px;
+    position: relative;
     &:hover{
         .far
         {
-            display:none;
+            display: block;
+            position: absolute;
         }
-        .fas{
+        .fas
+        {
             display:block;
         }
     }
@@ -21,7 +24,43 @@
         background: linear-gradient($primary, $secondary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        display:none;
-        position: relative;
+        animation: SlideUp 0.3s ease-in forwards;    
+    }
+}
+
+@keyframes SlideUp {
+    0%
+    {
+        transform: scale(0);
+    }
+    50%
+    {
+        transform: scale(0.5);  
+    }
+    100% 
+    {
+        transform: scale(1);
+    }
+}
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
     }
 }
