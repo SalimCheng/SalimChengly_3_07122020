@@ -341,4 +341,29 @@ body
             width: 89%;
         }
     }
+}
+@media (min-width: 1065px)
+{
+    @-webkit-keyframes slide 
+{ 
+    0% 
+    { 
+        transform: skew(0) translateX(3vw);
+    } 
+    100%
+    {
+        transform: skew(0) translateX(0%);
+    }
 } 
+@keyframes slide 
+{ 
+    0% 
+    { 
+        transform: skew(0) translateX(3vw);
+    } 
+    100%
+    {
+        transform: skew(0) translateX(0%);
+    }
+}
+}
