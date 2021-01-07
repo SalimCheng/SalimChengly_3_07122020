@@ -68,15 +68,19 @@ nav
         margin: 0.8rem 0 0.8rem 0;
         border-radius: 1rem;
         box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.08);
+        width: 100%;
         height: auto;
     
         h3
         {
             /*padding: 0.8rem 0 0.2rem 0.8rem;*/
             font-size: medium;
-            display: inline-block;
+            display: block;
+            width: 78%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             overflow: hidden;
-            width: 75%;
+            font-size: 14px;
         }
     }
 }
@@ -85,31 +89,51 @@ nav
 {
     display: block;
     justify-content: space-between;
-    padding: 0 0.8rem 0 0.8rem;
-    width: 80%;
-    height: 4rem;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    width: 85%;
+    height: auto;
+    line-height: 1.4rem;
     p 
     {
-        display: flex;
-        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        font-size: 14px;
+        text-overflow: ellipsis;
     }
+}
+.checkplace
+{
+    height: 100%;
+    width: 20%;
 }
 .priceplace
 {
     width: 10%;
-}
-.price
-{
     display: flex;
-    flex-direction: row-reverse;
-    width: 2rem;
+    align-items: center;
+    justify-content: flex-end;
     font-weight: bold;
     font-size: small;
+    padding: 1.1rem 0.5rem 0 0;
+}
+.check
+{
+    display: none;
+    width: 0%;
+    i
+    {
+        color: $white;
+    }
+    transform: scaleX(0);
+    transform-origin: left;
 }
 .menu-content
 {
     width: 100%;
     display: flex;
+    align-content: center;
+    justify-content: space-between;
 }
 @media (min-width: 320px) and (max-width: 480px)
 {
@@ -173,10 +197,6 @@ nav
     a.menu-content
     {
         width: 48rem;
-    }
-    .check
-    {
-        width: 5rem;
     }
 }
 @media (min-width: 1430px)

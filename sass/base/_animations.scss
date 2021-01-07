@@ -148,45 +148,36 @@ body
 }
 .menu--list
 {
-    width: 100%;
-    p 
-    {
-        width: 40vw;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }    
+    width: auto;
+  
     &--menu
     {
         width: 100%;
         display: flex;
         transform: translate(0px, -1vh);
-        h3 
-        {
-            text-overflow: clip ellipsis;
-        }
+        text-overflow: clip ellipsis;
         &:hover
         {
-            .price
+            div.menu--description
+            {
+                width: 80%;
+                text-overflow: clip ellipsis;
+            }
+
+            .priceplace
             {
                 transform-origin: right;
-                transition: AutoSlide 350ms ease-in-out;
+                /*transition: AutoSlide 350ms ease-in-out;*/
                 transition-property: all;
-                animation: slide 300ms ease-in; 
-            }
-            &--text
-            {
-                text-overflow: clip ellipsis;
-                overflow: hidden;
-                display: inline-block;
-                vertical-align: bottom;
+                animation: slide 300ms ease-in;
+                width: 10%; 
             }
             .check
             {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 5rem;
+                width: 3rem;
                 height: 100%;
                 border-radius: 0 1rem 1rem 0;
                 background-color: $tertiary;
@@ -202,15 +193,8 @@ body
         }
     }
 }
-.check
-{
-    display: none;
-    width: 0%;
-    i
-    {
-        color: $white;
-    }
-}
+
+
 #menu--anim li
 {
     -webkit-animation: fadein 1s ease-in-out;
@@ -250,6 +234,8 @@ body
     }    
 }
 
+// Check spin //
+
 @-webkit-keyframes spin
 {
     100%
@@ -275,24 +261,24 @@ body
     0%
     {
         transform: scaleX(0);
-        text-overflow: clip ellipsis;
     }
     50%
     {
         transform: scaleX(0.5);
-        text-overflow: clip ellipsis;  
     }
     100% 
     {
         transform: scaleX(1);
-        text-overflow: clip ellipsis;
     }
 }
-@keyframes SlideOut
-{
+@keyframes AutoSlide-rev {
     0%
     {
         transform: scaleX(1);
+    }
+    50%
+    {
+        transform: scaleX(0.5); 
     }
     100% 
     {
@@ -315,35 +301,24 @@ body
 { 
     0% 
     { 
-        transform: skew(0) translateX(5rem);
+        transform: skew(0) translateX(5vw);
     } 
     100%
     {
-        transform: skew(0) translateX(0rem);
+        transform: skew(0) translateX(0%);
     }
 } 
 @keyframes slide 
 { 
     0% 
     { 
-        transform: skew(0) translateX(10vw);
+        transform: skew(0) translateX(5vw);
     } 
     100%
     {
-        transform: skew(0) translateX(0rem);
+        transform: skew(0) translateX(0%);
     }
 }
-@keyframes ellipsis {
-    to {
-      width: 20px;    
-    }
-  }
-  
-  @-webkit-keyframes ellipsis {
-    to {
-      width: 20px;    
-    }
-  }
   @keyframes visibility2 {
     0% {
      opacity: 0;
@@ -356,4 +331,14 @@ body
      display: none;
      z-index: -9999;
     }
-   } 
+   }
+@media (min-width: 320px) and (max-width: 480px)
+{
+    .menu--list--menu:hover
+    {
+        a.menu-content
+        {
+            width: 89%;
+        }
+    }
+} 

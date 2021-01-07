@@ -232,39 +232,30 @@ td:not([align]), th:not([align]) {
 }
 
 .menu--list {
-  width: 100%;
-}
-.menu--list p {
-  width: 40vw;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  width: auto;
 }
 .menu--list--menu {
   width: 100%;
   display: flex;
   transform: translate(0px, -1vh);
-}
-.menu--list--menu h3 {
   text-overflow: clip ellipsis;
 }
-.menu--list--menu:hover .price {
+.menu--list--menu:hover div.menu--description {
+  width: 80%;
+  text-overflow: clip ellipsis;
+}
+.menu--list--menu:hover .priceplace {
   transform-origin: right;
-  transition: AutoSlide 350ms ease-in-out;
+  /*transition: AutoSlide 350ms ease-in-out;*/
   transition-property: all;
   animation: slide 300ms ease-in;
-}
-.menu--list--menu:hover--text {
-  text-overflow: clip ellipsis;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: bottom;
+  width: 10%;
 }
 .menu--list--menu:hover .check {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem;
+  width: 3rem;
   height: 100%;
   border-radius: 0 1rem 1rem 0;
   background-color: #99E2D0;
@@ -275,14 +266,6 @@ td:not([align]), th:not([align]) {
   -webkit-animation: spin 450ms linear;
   -moz-animation: spin 450ms linear;
   animation: spin 450ms linear;
-}
-
-.check {
-  display: none;
-  width: 0%;
-}
-.check i {
-  color: #fff;
 }
 
 #menu--anim li {
@@ -338,20 +321,20 @@ td:not([align]), th:not([align]) {
 @keyframes AutoSlide {
   0% {
     transform: scaleX(0);
-    text-overflow: clip ellipsis;
   }
   50% {
     transform: scaleX(0.5);
-    text-overflow: clip ellipsis;
   }
   100% {
     transform: scaleX(1);
-    text-overflow: clip ellipsis;
   }
 }
-@keyframes SlideOut {
+@keyframes AutoSlide-rev {
   0% {
     transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.5);
   }
   100% {
     transform: scaleX(0);
@@ -367,28 +350,18 @@ td:not([align]), th:not([align]) {
 }
 @-webkit-keyframes slide {
   0% {
-    transform: skew(0) translateX(5rem);
+    transform: skew(0) translateX(5vw);
   }
   100% {
-    transform: skew(0) translateX(0rem);
+    transform: skew(0) translateX(0%);
   }
 }
 @keyframes slide {
   0% {
-    transform: skew(0) translateX(10vw);
+    transform: skew(0) translateX(5vw);
   }
   100% {
-    transform: skew(0) translateX(0rem);
-  }
-}
-@keyframes ellipsis {
-  to {
-    width: 20px;
-  }
-}
-@-webkit-keyframes ellipsis {
-  to {
-    width: 20px;
+    transform: skew(0) translateX(0%);
   }
 }
 @keyframes visibility2 {
@@ -402,6 +375,11 @@ td:not([align]), th:not([align]) {
     opacity: 0;
     display: none;
     z-index: -9999;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .menu--list--menu:hover a.menu-content {
+    width: 89%;
   }
 }
 footer {
@@ -1059,43 +1037,66 @@ nav {
   margin: 0.8rem 0 0.8rem 0;
   border-radius: 1rem;
   box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.08);
+  width: 100%;
   height: auto;
 }
 .menu--list--menu h3 {
   /*padding: 0.8rem 0 0.2rem 0.8rem;*/
   font-size: medium;
-  display: inline-block;
+  display: block;
+  width: 78%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
-  width: 75%;
+  font-size: 14px;
 }
 
 .menu--description {
   display: block;
   justify-content: space-between;
-  padding: 0 0.8rem 0 0.8rem;
-  width: 80%;
-  height: 4rem;
+  padding: 0.8rem 0 0.8rem 0.8rem;
+  width: 85%;
+  height: auto;
+  line-height: 1.4rem;
 }
 .menu--description p {
-  display: flex;
-  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  font-size: 14px;
+  text-overflow: ellipsis;
+}
+
+.checkplace {
+  height: 100%;
+  width: 20%;
 }
 
 .priceplace {
   width: 10%;
-}
-
-.price {
   display: flex;
-  flex-direction: row-reverse;
-  width: 2rem;
+  align-items: center;
+  justify-content: flex-end;
   font-weight: bold;
   font-size: small;
+  padding: 1.1rem 0.5rem 0 0;
+}
+
+.check {
+  display: none;
+  width: 0%;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.check i {
+  color: #fff;
 }
 
 .menu-content {
   width: 100%;
   display: flex;
+  align-content: center;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1146,10 +1147,6 @@ nav {
 
   a.menu-content {
     width: 48rem;
-  }
-
-  .check {
-    width: 5rem;
   }
 }
 @media (min-width: 1430px) {
