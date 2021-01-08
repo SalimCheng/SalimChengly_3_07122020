@@ -186,9 +186,21 @@ nav
         margin: 10vw;
         box-shadow: 0px 3px 9px 0.9px rgba(0, 0, 0, 0.5);
     }
+    .title--content
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .menu
+    {
+        display: flex;
+        justify-content: center;
+    }
     ul.menu--list
     {
         padding: 1rem 0rem 0 0rem;
+        display: flex;
+        justify-content: center;
     }
     li.menu--list--menu
     {
@@ -222,6 +234,16 @@ nav
         position: relative;
         margin: 10vw;
         box-shadow: 0px 3px 9px 0.9px rgba(0, 0, 0, 0.5);
+    }
+    .title--content
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .menu
+    {
+        display: flex;
+        justify-content: center;
     }
     ul.menu--list
     {
