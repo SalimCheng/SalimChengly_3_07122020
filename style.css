@@ -980,6 +980,11 @@ nav i {
     margin: 0;
   }
 
+  .card--new {
+    top: 20px;
+    left: 13rem;
+  }
+
   .card--category img {
     height: 22rem;
     width: 20rem;
